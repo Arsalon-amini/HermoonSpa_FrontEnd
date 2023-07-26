@@ -12,6 +12,7 @@ const CenteredDiv = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  max-width: 100vw;
 `;
 
 const HomePage: React.FC<HomePageProps> = ({ children }) => {
