@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "target": "ES2020", // Adjust this to the Node.js version you are targeting
+    "module": "CommonJS", // CommonJS for Node.js
+    "moduleResolution": "Node", // Use "node" for Node.js environments
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": ["vite.config.ts"]
+}
