@@ -16,7 +16,7 @@ const Sandbox: React.FC<SandboxProps> = ({ children }) => {
         alignItems="center"
         justifyContent="center"
       >
-        <Typography variant="h1" color="primary" style={{ padding: "5rem" }}>
+        <Typography variant="h1" style={{ padding: "5rem" }}>
           一些神奇的事情即將到來。
         </Typography>
         {children}
