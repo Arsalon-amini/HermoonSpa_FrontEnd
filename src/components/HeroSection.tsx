@@ -20,7 +20,7 @@ const HeroSection = () => {
 };
 
 const HeroSectionWrapper = styled("div")(({ theme }) => ({
-  background: `url('../src/assets/images/hero.jpeg')`,
+  background: `url('https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg')`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   height: 700,
@@ -31,7 +31,7 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
 
   "& .heroContent": {
     textAlign: "center",
-    marginTop: "400px"
+    marginTop: "400px",
   },
 
   "& .heroTitle": {
