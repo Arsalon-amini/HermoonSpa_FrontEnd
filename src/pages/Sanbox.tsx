@@ -17,8 +17,12 @@ const Sandbox: React.FC<SandboxProps> = ({ children }) => {
         justifyContent="center"
       >
         <Typography variant="h1" style={{ padding: "5rem" }}>
-          一些神奇的事情即將到來。
+          想要看起來和感覺最好嗎？。
         </Typography>
+        <Typography variant="h2" style={{ padding: "5rem" }}>
+          留下自信的感覺。
+        </Typography>
+
         {children}
       </Box>
     </>
