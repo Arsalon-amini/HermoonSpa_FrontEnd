@@ -1,11 +1,13 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
+import StyledAppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+
+import { styled } from "@mui/material/styles";
 
 import Logo from "../Logo";
 import Divider from "@mui/material/Divider";
@@ -15,6 +17,10 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItem from "@mui/material/ListItem";
 import Drawer from "@mui/material/Drawer";
 
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import AppBar from "@mui/material/AppBar";
+
 const pages = ["產品和服務", "關於我們", "網上預訂"];
 
 type HeaderProps = {
@@ -22,6 +28,10 @@ type HeaderProps = {
 };
 
 const drawerWidth = 240;
+
+const CustomAppBar = styled(AppBar)(({ theme }) => ({
+  backgroundColor: "#ffffff", // Replace this with your desired white color
+}));
 
 const Header: React.FC<HeaderProps> = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -47,12 +57,21 @@ const Header: React.FC<HeaderProps> = () => {
   );
 
   return (
-    <AppBar position="fixed">
+    <CustomAppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Desktop Logo display container */}
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
             <Logo maxHeight="4rem" />
+          </Box>
+
+          {/* Tabs Components */}
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Tabs>
+              <Tab label="產品和服務" />
+              <Tab label="關於我們" />
+              <Tab label="網上預訂" />
+            </Tabs>
           </Box>
 
           {/* Mobile hamburger icon */}
@@ -118,7 +137,7 @@ const Header: React.FC<HeaderProps> = () => {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </CustomAppBar>
   );
 };
 

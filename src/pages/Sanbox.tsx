@@ -1,5 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import React from "react";
+import HeroSection from "../components/HeroSection";
 import Header from "../components/NavElements/Header";
 
 type SandboxProps = {
@@ -10,6 +11,7 @@ const Sandbox: React.FC<SandboxProps> = ({ children }) => {
   return (
     <>
       <Header />
+      <HeroSection />
       <Box
         display="flex"
         flexDirection="column"
@@ -20,9 +22,8 @@ const Sandbox: React.FC<SandboxProps> = ({ children }) => {
           想要看起來和感覺最好嗎？。
         </Typography>
         <Typography variant="h2" style={{ padding: "5rem" }}>
-          留下自信的感覺。
+          從對自己的投資開始。
         </Typography>
-
         {children}
       </Box>
     </>
