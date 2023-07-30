@@ -72,8 +72,12 @@ const Header: React.FC<HeaderProps> = () => {
           {/* Mobile Logo display container */}
           <Box
             sx={{
-              display: { xs: "flex", justifyContent: "center", md: "none" },
-              mr: 0,
+              display: "flex",
+              flexGrow: 1,
+              mr: 5,
+              "@media (min-width: 900px)": {
+                display: "none",
+              },
             }}
           >
             <Logo maxHeight="4rem" />
@@ -85,7 +89,7 @@ const Header: React.FC<HeaderProps> = () => {
               <Button
                 key={page}
                 onClick={() => {}}
-                sx={{ my: 2, color: "black", display: "block" }}
+                sx={{ my: 2, color: "black", display: "block", flexShrink: 0 }}
               >
                 {page}
               </Button>
