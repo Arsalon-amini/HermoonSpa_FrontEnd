@@ -1,10 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import CustomersPage from "./pages/CustomersPage";
-import HomePage from "./pages/HomePage";
+import AboutUsPage from "./pages/AboutUsPage";
+//import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
+import Sandbox from "./pages/Sanbox";
 
 const router = createBrowserRouter([
-    { path: "/", element: <HomePage /> },
-    { path: '/customers', element: <CustomersPage /> },
-])
+  { path: "/", element: <Sandbox /> },
+  { path: "/Products", element: <ProductsPage /> },
+  { path: "/about", element: <AboutUsPage/> },
+]);
 
 export default router;
