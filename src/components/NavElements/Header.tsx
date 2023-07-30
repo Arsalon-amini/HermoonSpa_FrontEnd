@@ -3,15 +3,9 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 
 import Logo from "../Logo";
 import Divider from "@mui/material/Divider";
@@ -22,7 +16,6 @@ import ListItem from "@mui/material/ListItem";
 import Drawer from "@mui/material/Drawer";
 
 const pages = ["產品和服務", "關於我們", "網上預訂"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 type HeaderProps = {
   children?: React.ReactNode;
@@ -31,29 +24,27 @@ type HeaderProps = {
 const drawerWidth = 240;
 
 const Header: React.FC<HeaderProps> = () => {
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
 
-    const handleDrawerToggle = () => {
-      setMobileOpen((prevState) => !prevState);
-    };
-
-    const drawer = (
-      <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-        <Logo maxHeight="6rem"/>
-        <Divider />
-        <List>
-          {pages.map((item) => (
-            <ListItem key={item} disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Box>
-    );
-
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Logo maxHeight="6rem" />
+      <Divider />
+      <List>
+        {pages.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <AppBar position="fixed">
@@ -93,7 +84,7 @@ const Header: React.FC<HeaderProps> = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={()=>{ }}  
+                onClick={() => {}}
                 sx={{ my: 2, color: "black", display: "block" }}
               >
                 {page}
