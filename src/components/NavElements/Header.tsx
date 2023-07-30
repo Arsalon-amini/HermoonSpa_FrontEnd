@@ -1,5 +1,4 @@
 import * as React from "react";
-import StyledAppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -30,7 +29,7 @@ type HeaderProps = {
 const drawerWidth = 240;
 
 const CustomAppBar = styled(AppBar)(({ theme }) => ({
-  backgroundColor: "#ffffff", // Replace this with your desired white color
+  backgroundColor: theme.palette.common.white,
 }));
 
 const Header: React.FC<HeaderProps> = () => {

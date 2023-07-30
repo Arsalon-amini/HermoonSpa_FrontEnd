@@ -9,6 +9,14 @@ const theme = createTheme({
             main: "#FFFFF0",
         }
     },
+    typography: {
+        h1: {
+            fontSize: "2.5rem",
+        },
+        h2: {
+            fontSize: "2rem",
+        },
+}
 });
 
 export default theme;
