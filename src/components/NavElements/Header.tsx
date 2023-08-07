@@ -1,19 +1,19 @@
-import * as React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-
-import { styled } from "@mui/material/styles";
-
-import Logo from "../Logo";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import { styled } from "@mui/material/styles";
+import Toolbar from "@mui/material/Toolbar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import AppBar from "@mui/material/AppBar";
+
+import Logo from "../Logo";
 import theme from "../../utils/useTheme";
 
 type HeaderProps = {
@@ -35,15 +35,59 @@ const Header: React.FC<HeaderProps> = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Logo maxHeight="6rem" />
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Logo maxHeight="4rem" />
+      </Link>
       <Divider />
       {/* Tabs Components */}
-      <Box sx={{ display: { xs: "none", md: "flex" } }}>
-        <Tabs>
-          <Tab label="產品和服務" sx={{ color: theme.palette.common.black }} />
-          <Tab label="關於我們" sx={{ color: theme.palette.common.black }} />
-          <Tab label="網上預訂" sx={{ color: theme.palette.common.black }} />
-        </Tabs>
+      <Box sx={{ display: { xs: "block", md: "flex" } }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Link
+            to="/products"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Tab
+              label="產品和服務"
+              sx={{
+                color: theme.palette.common.black,
+                minWidth: "unset",
+                width: "100%", // Full width for vertical tabs
+              }}
+            />
+          </Link>
+          <Link
+            to="/about"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Tab
+              label="關於我們"
+              sx={{
+                color: theme.palette.common.black,
+                minWidth: "unset",
+                width: "100%", // Full width for vertical tabs
+              }}
+            />
+          </Link>
+          <Link
+            to="/booking"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Tab
+              label="網上預訂"
+              sx={{
+                color: theme.palette.common.black,
+                minWidth: "unset",
+                width: "100%", // Full width for vertical tabs
+              }}
+            />
+          </Link>
+        </div>
       </Box>
     </Box>
   );
@@ -54,24 +98,53 @@ const Header: React.FC<HeaderProps> = () => {
         <Toolbar disableGutters>
           {/* Desktop Logo display container */}
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
-            <Logo maxHeight="4rem" />
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Logo maxHeight="4rem" />
+            </Link>
           </Box>
 
           {/* Tabs Components */}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Tabs>
-              <Tab
-                label="產品和服務"
-                sx={{ color: theme.palette.common.black }}
-              />
-              <Tab
-                label="關於我們"
-                sx={{ color: theme.palette.common.black }}
-              />
-              <Tab
-                label="網上預訂"
-                sx={{ color: theme.palette.common.black }}
-              />
+              <Link
+                to="/products"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Tab
+                  label="產品和服務"
+                  sx={{
+                    color: theme.palette.common.black,
+                    minWidth: "unset",
+                    width: "100%", // Full width for vertical tabs
+                  }}
+                />
+              </Link>
+              <Link
+                to="/about"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Tab
+                  label="關於我們"
+                  sx={{
+                    color: theme.palette.common.black,
+                    minWidth: "unset",
+                    width: "100%", // Full width for vertical tabs
+                  }}
+                />
+              </Link>
+              <Link
+                to="/booking"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Tab
+                  label="網上預訂"
+                  sx={{
+                    color: theme.palette.common.black,
+                    minWidth: "unset",
+                    width: "100%", // Full width for vertical tabs
+                  }}
+                />
+              </Link>
             </Tabs>
           </Box>
 
@@ -106,7 +179,9 @@ const Header: React.FC<HeaderProps> = () => {
               },
             }}
           >
-            <Logo maxHeight="4rem" />
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Logo maxHeight="4rem" />
+            </Link>
           </Box>
 
           {/* Nav Menu links ipad/desktop */}
