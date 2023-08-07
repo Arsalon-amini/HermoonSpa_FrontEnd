@@ -1,28 +1,38 @@
 import React from "react";
-import Logo from "../components/Logo";
-import styled from "styled-components";
+import { Typography, Box } from "@mui/material";
+import HeroSection from "../components/HeroSection";
+import Header from "../components/NavElements/Header";
+import theme from "../utils/useTheme";
+
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import testimonialData from "../utils/TestimonialData";
 
 type HomePageProps = {
   children?: React.ReactNode;
 };
 
-const CenteredDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  max-width: 100vw;
-`;
-
 const HomePage: React.FC<HomePageProps> = ({ children }) => {
   return (
     <>
-      <CenteredDiv>
-        <Logo />
-        <div>網站即將推出...</div>
+      <Header />
+      <HeroSection />
+      <TestimonialCarousel testimonials={testimonialData} />
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        padding={theme.spacing(10, 0)}
+      >
+        <Typography
+          variant="h1"
+          style={{ padding: "2rem", color: theme.palette.primary.main }}
+        >
+          想要看起來和感覺最好嗎？。
+        </Typography>
+        <Typography variant="h2">從對自己的投資開始。</Typography>
         {children}
-      </CenteredDiv>
+      </Box>
     </>
   );
 };

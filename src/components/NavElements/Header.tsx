@@ -4,23 +4,17 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 
 import { styled } from "@mui/material/styles";
 
 import Logo from "../Logo";
 import Divider from "@mui/material/Divider";
-import ListItemButton from "@mui/material/ListItemButton";
-import List from "@mui/material/List";
-import ListItemText from "@mui/material/ListItemText";
-import ListItem from "@mui/material/ListItem";
 import Drawer from "@mui/material/Drawer";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import AppBar from "@mui/material/AppBar";
-
-const pages = ["產品和服務", "關於我們", "網上預訂"];
+import theme from "../../utils/useTheme";
 
 type HeaderProps = {
   children?: React.ReactNode;
@@ -43,15 +37,14 @@ const Header: React.FC<HeaderProps> = () => {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Logo maxHeight="6rem" />
       <Divider />
-      <List>
-        {pages.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      {/* Tabs Components */}
+      <Box sx={{ display: { xs: "none", md: "flex" } }}>
+        <Tabs>
+          <Tab label="產品和服務" sx={{ color: theme.palette.common.black }} />
+          <Tab label="關於我們" sx={{ color: theme.palette.common.black }} />
+          <Tab label="網上預訂" sx={{ color: theme.palette.common.black }} />
+        </Tabs>
+      </Box>
     </Box>
   );
 
@@ -67,14 +60,29 @@ const Header: React.FC<HeaderProps> = () => {
           {/* Tabs Components */}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Tabs>
-              <Tab label="產品和服務" />
-              <Tab label="關於我們" />
-              <Tab label="網上預訂" />
+              <Tab
+                label="產品和服務"
+                sx={{ color: theme.palette.common.black }}
+              />
+              <Tab
+                label="關於我們"
+                sx={{ color: theme.palette.common.black }}
+              />
+              <Tab
+                label="網上預訂"
+                sx={{ color: theme.palette.common.black }}
+              />
             </Tabs>
           </Box>
 
           {/* Mobile hamburger icon */}
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              color: { color: theme.palette.common.black },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -102,17 +110,7 @@ const Header: React.FC<HeaderProps> = () => {
           </Box>
 
           {/* Nav Menu links ipad/desktop */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={() => {}}
-                sx={{ my: 2, color: "black", display: "block", flexShrink: 0 }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
 
           {/* mobile side menu slider container */}
           <Box component="nav">

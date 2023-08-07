@@ -1,48 +1,60 @@
 import { styled } from "@mui/material/styles";
-import { Button, Container, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 const HeroSection = () => {
   return (
     <HeroSectionWrapper>
+      <div className="backgroundOverlay"></div>
       <Container className="heroContent">
         <Typography variant="h1" className="heroTitle">
-          變得美麗
+          禾沐
         </Typography>
-        <Typography variant="body1" className="heroText">
-          當你變得更好時，一切都會變得更好
+        <Typography variant="h2" className="heroText">
+          Beauty Spa
         </Typography>
-        <Button variant="contained" className="heroButton">
-          了解更多
-        </Button>
       </Container>
     </HeroSectionWrapper>
   );
 };
 
 const HeroSectionWrapper = styled("div")(({ theme }) => ({
-  background: `url('https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg')`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  height: 700,
+  position: "relative", // Add this line to make position relative
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: theme.palette.common.black,
+  color: theme.palette.primary.main,
+
+  "& .backgroundOverlay": {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background: `url('https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    opacity: 0.75, // Set the opacity here
+    height: 500,
+  },
 
   "& .heroContent": {
+    position: "relative", // Add this line to make position relative
     textAlign: "center",
-    marginTop: "400px",
+    marginTop: "350px",
+    zIndex: 2, // Add this line to ensure the content is above the overlay
   },
 
   "& .heroTitle": {
-    fontSize: 36,
+    fontSize: 52,
     fontWeight: "bold",
     marginBottom: theme.spacing(),
+    color: theme.palette.common.white,
   },
 
   "& .heroText": {
     fontSize: 20,
     marginBottom: theme.spacing(4),
+    color: theme.palette.common.white,
   },
 
   "& .heroButton": {

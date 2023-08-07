@@ -1,30 +1,16 @@
-import { Typography, Box } from "@mui/material";
-import React from "react";
-import HeroSection from "../components/HeroSection";
-import Header from "../components/NavElements/Header";
+import { Typography } from "@mui/material";
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import testimonialData from "../utils/TestimonialData";
 
-type SandboxProps = {
-  children?: React.ReactNode;
-};
 
-const Sandbox: React.FC<SandboxProps> = ({ children }) => {
+const Sandbox: React.FC = () => {
   return (
-    <>
-      <Header />
-      <HeroSection />
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Typography variant="h1" style={{ padding: "3rem" }}>
-          想要看起來和感覺最好嗎？。
-        </Typography>
-        <Typography variant="h2">從對自己的投資開始。</Typography>
-        {children}
-      </Box>
-    </>
+    <div>
+      <Typography variant="h5" gutterBottom>
+        Testimonials
+      </Typography>
+      <TestimonialCarousel testimonials={testimonialData} />
+    </div>
   );
 };
 

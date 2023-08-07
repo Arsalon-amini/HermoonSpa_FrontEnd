@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import logo from "../assets/logo.svg";
 
 type LogoProps = {
@@ -7,15 +8,21 @@ type LogoProps = {
   children?: React.ReactNode;
 };
 
+const StyledLogo = styled.img<LogoProps>`
+  max-width: ${(props) => props.maxWidth};
+  max-height: ${(props) => props.maxHeight};
+`;
+
 const Logo: React.FC<LogoProps> = ({
   maxHeight = "100%",
   maxWidth = "100%",
 }) => {
   return (
-    <img
+    <StyledLogo
       src={logo}
       alt="logo"
-      style={{ maxWidth: maxWidth, maxHeight: maxHeight }}
+      maxWidth={maxWidth}
+      maxHeight={maxHeight}
     />
   );
 };
