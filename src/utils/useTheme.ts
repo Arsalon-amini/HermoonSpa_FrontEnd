@@ -10,6 +10,7 @@ const theme = createTheme({
         }
     },
     typography: {
+        fontFamily: "Labrada",
         h1: {
             fontSize: "2.5rem",
         },

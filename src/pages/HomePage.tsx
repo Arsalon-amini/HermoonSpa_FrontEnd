@@ -15,7 +15,11 @@ const HomePage: React.FC<HomePageProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <HeroSection />
+      <HeroSection
+        imageUrl="https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg"
+        H1="禾沐"
+        H2="Beauty Spa"
+      />
       <TestimonialCarousel testimonials={testimonialData} />
       <Box
         display="flex"

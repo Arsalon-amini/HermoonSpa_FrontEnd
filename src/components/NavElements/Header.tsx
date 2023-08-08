@@ -15,6 +15,7 @@ import Tab from "@mui/material/Tab";
 
 import Logo from "../Logo";
 import theme from "../../utils/useTheme";
+import { Button } from "@mui/material";
 
 type HeaderProps = {
   children?: React.ReactNode;
@@ -87,19 +88,19 @@ const Header: React.FC<HeaderProps> = () => {
               }}
             />
           </Link>
-          <Link
+          <Button
+            component={Link}
             to="/booking"
-            style={{ textDecoration: "none", color: "inherit" }}
+            variant="outlined"
+            sx={{
+              color: theme.palette.primary.main, // Setting text color
+              minWidth: "unset",
+              width: "50%", // Full width for vertical tabs
+              textAlign: "center",
+            }}
           >
-            <Tab
-              label="網上預訂"
-              sx={{
-                color: theme.palette.common.black,
-                minWidth: "unset",
-                width: "100%", // Full width for vertical tabs
-              }}
-            />
-          </Link>
+            網上預訂
+          </Button>
         </div>
       </Box>
     </Box>

@@ -1,22 +1,27 @@
 import { styled } from "@mui/material/styles";
 import { Container, Typography } from "@mui/material";
 
-const HeroSection = () => {
+type HeroSectionProps = {
+  imageUrl: string;
+  H1: string;
+  H2: string;
+};
+
+const HeroSection: React.FC<HeroSectionProps> = ({ imageUrl, H1, H2 }) => {
   return (
     <HeroSectionWrapper>
-      <div className="backgroundOverlay"/>
-        <Container className="heroContent">
-          <Typography
-            variant="h1"
-            className="heroTitle"
-            sx={{ fontFamily: "Labrada" }}
-          >
-            禾沐
-          </Typography>
-          <Typography variant="h2" className="heroText">
-            Beauty Spa
-          </Typography>
-        </Container>
+      <div
+        className="backgroundOverlay"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
+      <Container className="heroContent">
+        <Typography variant="h1" className="heroTitle">
+          {H1}
+        </Typography>
+        <Typography variant="h2" className="heroText">
+          {H2}
+        </Typography>
+      </Container>
     </HeroSectionWrapper>
   );
 };
@@ -27,7 +32,6 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   color: theme.palette.primary.main,
-  
 
   "& .backgroundOverlay": {
     position: "absolute",
@@ -35,7 +39,6 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
     left: 0,
     right: 0,
     bottom: 0,
-    background: `url('https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     opacity: 0.95, // Set the opacity here
@@ -60,16 +63,6 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
     fontSize: 20,
     marginBottom: theme.spacing(4),
     color: theme.palette.common.white,
-  },
-
-  "& .heroButton": {
-    padding: theme.spacing(1.5, 3),
-    fontSize: 18,
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.black,
-    "&:hover": {
-      backgroundColor: theme.palette.primary.light,
-    },
   },
 }));
 

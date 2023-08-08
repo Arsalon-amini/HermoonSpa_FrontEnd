@@ -1,17 +1,12 @@
-import { Typography } from "@mui/material";
-import TestimonialCarousel from "../components/TestimonialCarousel";
-import testimonialData from "../utils/TestimonialData";
+import HeroSection from "../components/HeroSection";
 
-
-const Sandbox: React.FC = () => {
+const Sanbox = () => {
   return (
-    <div>
-      <Typography variant="h5" gutterBottom>
-        Testimonials
-      </Typography>
-      <TestimonialCarousel testimonials={testimonialData} />
-    </div>
+    <HeroSection
+      imageUrl="https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg"
+      H1="禾沐"
+      H2="Beauty Spa"
+    />
   );
 };
-
-export default Sandbox;
+export default Sanbox;
