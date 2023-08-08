@@ -4,15 +4,19 @@ import { Container, Typography } from "@mui/material";
 const HeroSection = () => {
   return (
     <HeroSectionWrapper>
-      <div className="backgroundOverlay"></div>
-      <Container className="heroContent">
-        <Typography variant="h1" className="heroTitle">
-          禾沐
-        </Typography>
-        <Typography variant="h2" className="heroText">
-          Beauty Spa
-        </Typography>
-      </Container>
+      <div className="backgroundOverlay"/>
+        <Container className="heroContent">
+          <Typography
+            variant="h1"
+            className="heroTitle"
+            sx={{ fontFamily: "Labrada" }}
+          >
+            禾沐
+          </Typography>
+          <Typography variant="h2" className="heroText">
+            Beauty Spa
+          </Typography>
+        </Container>
     </HeroSectionWrapper>
   );
 };
@@ -23,6 +27,7 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   color: theme.palette.primary.main,
+  
 
   "& .backgroundOverlay": {
     position: "absolute",
@@ -33,7 +38,7 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
     background: `url('https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    opacity: 0.75, // Set the opacity here
+    opacity: 0.95, // Set the opacity here
     height: 500,
   },
 

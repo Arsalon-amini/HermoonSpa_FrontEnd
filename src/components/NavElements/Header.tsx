@@ -49,11 +49,11 @@ const Header: React.FC<HeaderProps> = () => {
           }}
         >
           <Link
-            to="/products"
+            to="/about"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Tab
-              label="產品和服務"
+              label="我們的隊伍"
               sx={{
                 color: theme.palette.common.black,
                 minWidth: "unset",
@@ -62,11 +62,24 @@ const Header: React.FC<HeaderProps> = () => {
             />
           </Link>
           <Link
-            to="/about"
+            to="/classes"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Tab
-              label="關於我們"
+              label="美容班"
+              sx={{
+                color: theme.palette.common.black,
+                minWidth: "unset",
+                width: "100%", // Full width for vertical tabs
+              }}
+            />
+          </Link>
+          <Link
+            to="/products"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Tab
+              label="產品和服務"
               sx={{
                 color: theme.palette.common.black,
                 minWidth: "unset",
@@ -107,11 +120,11 @@ const Header: React.FC<HeaderProps> = () => {
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Tabs>
               <Link
-                to="/products"
+                to="/about"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <Tab
-                  label="產品和服務"
+                  label="關於我們"
                   sx={{
                     color: theme.palette.common.black,
                     minWidth: "unset",
@@ -120,11 +133,24 @@ const Header: React.FC<HeaderProps> = () => {
                 />
               </Link>
               <Link
-                to="/about"
+                to="/classes"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <Tab
-                  label="關於我們"
+                  label="美容班"
+                  sx={{
+                    color: theme.palette.common.black,
+                    minWidth: "unset",
+                    width: "100%", // Full width for vertical tabs
+                  }}
+                />
+              </Link>
+              <Link
+                to="/products"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Tab
+                  label="產品和服務"
                   sx={{
                     color: theme.palette.common.black,
                     minWidth: "unset",
