@@ -3,8 +3,8 @@ import { Container, Typography } from "@mui/material";
 
 type HeroSectionProps = {
   imageUrl: string;
-  H1: string;
-  H2: string;
+  H1?: string;
+  H2?: string;
 };
 
 const HeroSection: React.FC<HeroSectionProps> = ({ imageUrl, H1, H2 }) => {
@@ -42,7 +42,7 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     opacity: 0.95, // Set the opacity here
-    height: 500,
+    height: "500",
   },
 
   "& .heroContent": {
@@ -56,13 +56,13 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
     fontSize: 52,
     fontWeight: "bold",
     marginBottom: theme.spacing(),
-    color: theme.palette.common.white,
+    color: theme.palette.primary.main,
   },
 
   "& .heroText": {
     fontSize: 20,
     marginBottom: theme.spacing(4),
-    color: theme.palette.common.white,
+    color: theme.palette.primary.main,
   },
 }));
 

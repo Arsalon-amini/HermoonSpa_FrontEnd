@@ -1,11 +1,10 @@
-import HeroSection from "../components/HeroSection";
+import ContentCardCarousel from "../components/ContentCardCarousel";
+import content from "../utils/ClassesContent";
 
 const Sanbox = () => {
   return (
-    <HeroSection
-      imageUrl="https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg"
-      H1="禾沐"
-      H2="Beauty Spa"
+    <ContentCardCarousel
+      content={content}
     />
   );
 };

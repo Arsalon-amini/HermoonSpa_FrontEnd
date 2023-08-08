@@ -1,6 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import ContentCardCarousel from "../components/ContentCardCarousel";
+import HeroSection from "../components/HeroSection";
 import Header from "../components/NavElements/Header";
+import content from "../utils/ClassesContent";
 
 type ClassesPageProps = {
   children?: React.ReactNode;
@@ -9,21 +12,30 @@ type ClassesPageProps = {
 const ClassesPage: React.FC<ClassesPageProps> = () => {
   return (
     <>
-      <>
         <Header />
+        <HeroSection imageUrl="https://hermoonspa.s3.ap-southeast-2.amazonaws.com/license.jpeg" />
         <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          
+        }}
+        >
+        <Typography
+          variant="h1"
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            padding: "0.5rem",
+            margin: "30px",
           }}
         >
-          <Typography variant="h1" sx={{ padding: "110px" }}>
-            Classes
-          </Typography>
+          世界級的專業精神
+        </Typography>
+
         </Box>
+        <ContentCardCarousel content={content} />
       </>
-    </>
   );
 };
 

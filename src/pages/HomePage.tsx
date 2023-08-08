@@ -6,12 +6,14 @@ import theme from "../utils/useTheme";
 
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import testimonialData from "../utils/TestimonialData";
+import ContentCardCarousel from "../components/ContentCardCarousel";
+import content from "../utils/ClassesContent";
 
 type HomePageProps = {
   children?: React.ReactNode;
 };
 
-const HomePage: React.FC<HomePageProps> = ({ children }) => {
+const HomePage: React.FC<HomePageProps> = () => {
   return (
     <>
       <Header />
@@ -20,23 +22,30 @@ const HomePage: React.FC<HomePageProps> = ({ children }) => {
         H1="禾沐"
         H2="Beauty Spa"
       />
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        padding={theme.spacing(5, 0)}
+      >
+        <Typography variant="h1" style={{ color: theme.palette.secondary.main }}>
+          創造終身客戶
+        </Typography>
+      </Box>
       <TestimonialCarousel testimonials={testimonialData} />
       <Box
         display="flex"
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        padding={theme.spacing(10, 0)}
+        padding={theme.spacing(5, 0)}
       >
-        <Typography
-          variant="h1"
-          style={{ padding: "2rem", color: theme.palette.primary.main }}
-        >
-          想要看起來和感覺最好嗎？。
+        <Typography variant="h1" style={{ color: theme.palette.secondary.main }}>
+          世界級的專業精神
         </Typography>
-        <Typography variant="h2">從對自己的投資開始。</Typography>
-        {children}
       </Box>
+      <ContentCardCarousel content={content} />
     </>
   );
 };
