@@ -56,13 +56,13 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
     fontSize: 52,
     fontWeight: "bold",
     marginBottom: theme.spacing(),
-    color: theme.palette.primary.main,
+    color: theme.palette.common.white,
   },
 
   "& .heroText": {
     fontSize: 20,
     marginBottom: theme.spacing(4),
-    color: theme.palette.primary.main,
+    color: theme.palette.common.white,
   },
 }));
 
