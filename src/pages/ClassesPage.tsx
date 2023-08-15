@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import Header from "../components/NavElements/Header";
 import content from "../utils/ClassesContent";
 
+
 type ClassesPageProps = {
   children?: React.ReactNode;
 };

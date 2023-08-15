@@ -19,7 +19,7 @@ const BookingPage: React.FC<BookingPageProps> = () => {
           }}
         >
           <Typography variant="h1" sx={{ padding: "110px" }}>
-            Booking
+            Booking | Contact Us
           </Typography>
         </Box>
       </>
