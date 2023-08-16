@@ -1,14 +1,19 @@
 import { Container, Paper } from '@mui/material';
 import React from "react";
 import AccordionItem from './AccordionItem';
-import FAQContent from '../utils/FAQContent';
 
 
-type FAQAccordionProps = {
 
+type FAQ = {
+    title: string;
+    content: string;
 }
 
-const FAQAccordion: React.FC<FAQAccordionProps> = () => {
+type FAQAccordionProps = {
+    FAQContent: FAQ[];
+}
+
+const FAQAccordion: React.FC<FAQAccordionProps> = ({ FAQContent }) => {
     return (
         <>
         <Container>

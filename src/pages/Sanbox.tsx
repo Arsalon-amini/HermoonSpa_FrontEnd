@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import ContentCard from "../components/ContentCard";
 import FAQAccordion from "../components/FAQAccordion";
+import FAQContent from "../utils/HomePageFAQContent";
 
 
 const Sanbox = () => {
@@ -36,7 +37,7 @@ const Sanbox = () => {
           FAQ Accordion Component
         </Typography>
       </Box>
-      <FAQAccordion />
+      <FAQAccordion FAQContent={FAQContent}/>
    
       <Box sx={{ display: "flex", justifyContent: "center", padding: "2rem" }}>
         <Typography variant="h6" fontSize="2rem">

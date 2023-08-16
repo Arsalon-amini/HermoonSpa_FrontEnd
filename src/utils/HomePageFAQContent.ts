@@ -1,7 +1,7 @@
 const FAQContent = [
     {
-      title: "What is Netflix?",
-      content: "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+      title: "這是經過認證的服務嗎？?",
+      content: "是的，所有皮膚護理專業人士和講師均獲得韓國最高當局的認證，這是台灣南部獲得此級別認證的兩個機構之一。.",
     },
     {
       title: "How much does Netflix cost?",
