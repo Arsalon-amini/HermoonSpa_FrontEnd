@@ -4,10 +4,7 @@ import HeroSection from "../components/HeroSection";
 import Header from "../components/NavElements/Header";
 import theme from "../utils/useTheme";
 
-import TestimonialCarousel from "../components/TestimonialCarousel";
-import testimonialData from "../data/TestimonialData";
-import ContentCardCarousel from "../components/ContentCardCarousel";
-import content from "../data/ClassesContent";
+
 import FAQAccordion from "../components/FAQAccordion";
 import HomePageFAQContent from "../data/HomePageFAQContent";
 import CardGrid from "../components/CardGrid";

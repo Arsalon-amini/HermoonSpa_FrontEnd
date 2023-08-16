@@ -25,13 +25,12 @@ interface ProductCardProps {
   images: Image[];
 }
 
-const CardWrapper = styled(Card)(({ theme }) => ({
+const CardWrapper = styled(Card)(({ }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   maxWidth: 400,
   margin: "0 auto",
-  boxShadow: theme.shadows[3],
 }));
 
 const ImageSlider = styled(Slider)({

@@ -1,4 +1,4 @@
-import React, { useRef} from "react";
+import React, { useRef } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,7 @@ import TestimonialCard from "./TestimonialCard";
 
 type Testimonial = {
   id: number;
-  name?: string;
+  name: string;
   image: string;
   testimonial: string;
 };
