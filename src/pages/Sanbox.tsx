@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import ProductCard from "../components/ProductCard";
+
+import ProductGrid from "../components/ProductGrid";
 import ProdDetails from "../data/ProductDetailsData";
 
 const Sanbox = () => {
@@ -8,20 +9,11 @@ const Sanbox = () => {
     <>
       <Box sx={{ display: "flex", justifyContent: "center", padding: "2rem" }}>
         <Typography variant="h6" fontSize="2rem">
-          Product Card Testing
+          皮膚和痤瘡服務
         </Typography>
       </Box>
 
-      {ProdDetails.map((product) => (
-        <ProductCard
-          key={product.id}
-          name={product.name}
-          description={product.description}
-          price={product.price}
-          discountPrice={product.discountPrice}
-          images={product.images}
-        />
-      ))}
+      <ProductGrid products={ProdDetails} />
     </>
   );
 };
