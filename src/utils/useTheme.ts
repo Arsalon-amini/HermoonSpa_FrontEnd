@@ -17,7 +17,7 @@ const theme = createTheme({
         h2: {
             fontSize: "2rem",
         },
-}
+    }
 });
 
 export default theme;

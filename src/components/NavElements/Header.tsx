@@ -120,94 +120,97 @@ const Header: React.FC<HeaderProps> = () => {
   );
 
   return (
-    <AppBar
-      sx={{
-        backgroundColor: theme.palette.common.white,
-      }}
-    >
-      <Toolbar disableGutters sx={{ ...theme.mixins.toolbar }}>
-        {/* Desktop Logo display container */}
-        <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <Logo maxHeight="4rem" />
-          </Link>
-        </Box>
+    <>
+      <AppBar
+        sx={{
+          backgroundColor: theme.palette.common.white,
+        }}
+      >
+        <Toolbar disableGutters sx={{ ...theme.mixins.toolbar }}>
+          {/* Desktop Logo display container */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Logo maxHeight="4rem" />
+            </Link>
+          </Box>
 
-        {/* Tabs Components */}
-        <Box
-          sx={{
-            display: { xs: "none", md: "flex" },
-          }}
-        >
-          <Tabs value={value} onChange={handleTabChange}>
-            <Tab label="關於我們" to="/about" component={Link} />
-            <Tab label="美容班" to="/classes" component={Link} />
-            <Tab label="產品和服務" to="/products" component={Link} />
-            <Tab label="聯繫我們" to="/booking" component={Link} />
-          </Tabs>
-        </Box>
-
-        {/* Mobile hamburger icon */}
-        <Box
-          sx={{
-            flexGrow: 1,
-            display: { xs: "flex", md: "none" },
-            color: { color: theme.palette.common.black },
-          }}
-        >
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleDrawerToggle}
-            color="inherit"
-          >
-            <MenuIcon />
-          </IconButton>
-        </Box>
-
-        {/* Mobile Logo display container */}
-        <Box
-          sx={{
-            display: "flex",
-            flexGrow: 1,
-            mr: 5,
-            "@media (min-width: 900px)": {
-              display: "none",
-            },
-          }}
-        >
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <Logo maxHeight="4rem" />
-          </Link>
-        </Box>
-
-        {/* Nav Menu links ipad/desktop */}
-        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
-
-        {/* mobile side menu slider container */}
-        <Box component="nav">
-          <Drawer
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
+          {/* Tabs Components */}
+          <Box
             sx={{
-              display: { xs: "block", sm: "block" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
+              display: { xs: "none", md: "flex" },
+            }}
+          >
+            <Tabs value={value} onChange={handleTabChange}>
+              <Tab label="關於我們" to="/about" component={Link} />
+              <Tab label="美容班" to="/classes" component={Link} />
+              <Tab label="產品和服務" to="/products" component={Link} />
+              <Tab label="聯繫我們" to="/booking" component={Link} />
+            </Tabs>
+          </Box>
+
+          {/* Mobile hamburger icon */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              color: { color: theme.palette.common.black },
+            }}
+          >
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleDrawerToggle}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
+
+          {/* Mobile Logo display container */}
+          <Box
+            sx={{
+              display: "flex",
+              flexGrow: 1,
+              mr: 5,
+              "@media (min-width: 900px)": {
+                display: "none",
               },
             }}
           >
-            {drawer}
-          </Drawer>
-        </Box>
-      </Toolbar>
-    </AppBar>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Logo maxHeight="4rem" />
+            </Link>
+          </Box>
+
+          {/* Nav Menu links ipad/desktop */}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
+
+          {/* mobile side menu slider container */}
+          <Box component="nav">
+            <Drawer
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                display: { xs: "block", sm: "block" },
+                "& .MuiDrawer-paper": {
+                  boxSizing: "border-box",
+                  width: drawerWidth,
+                },
+              }}
+            >
+              {drawer}
+            </Drawer>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      
+    </>
   );
 };
 
