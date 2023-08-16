@@ -10,6 +10,7 @@ import ContentCardCarousel from "../components/ContentCardCarousel";
 import content from "../utils/ClassesContent";
 import FAQAccordion from "../components/FAQAccordion";
 import HomePageFAQContent from "../utils/HomePageFAQContent";
+import TestimonialGridContent from "../utils/TestimonialGridContent";
 
 type HomePageProps = {
   children?: React.ReactNode;
@@ -44,7 +45,7 @@ const HomePage: React.FC<HomePageProps> = () => {
           display="flex"
           flexDirection="column"
           alignItems="center"
-          justifyContent="center" 
+          justifyContent="center"
         >
           <Typography
             variant="h1"
@@ -82,7 +83,6 @@ const HomePage: React.FC<HomePageProps> = () => {
         <ContentCardCarousel content={content} />
       </Paper>
 
-      
       <FAQAccordion FAQContent={HomePageFAQContent} FAQTitle="經常問的問題" />
     </>
   );

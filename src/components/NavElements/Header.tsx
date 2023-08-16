@@ -36,6 +36,8 @@ const Header: React.FC<HeaderProps> = () => {
       setValue(2);
     } else if (window.location.pathname === "/booking" && value !== 3) {
       setValue(3);
+    } else if (window.location.pathname === "/testimonials" && value !== 4) {
+      setValue(4);
     }
   }, [value]);
 
@@ -101,6 +103,19 @@ const Header: React.FC<HeaderProps> = () => {
               }}
             />
           </Link>
+          <Link
+            to="/testimonials"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Tab
+              label="顧客評論"
+              sx={{
+                color: theme.palette.common.black,
+                minWidth: "unset",
+                width: "100%", // Full width for vertical tabs
+              }}
+            />
+          </Link>
           <Button
             component={Link}
             to="/booking"
@@ -145,6 +160,7 @@ const Header: React.FC<HeaderProps> = () => {
               <Tab label="美容班" to="/classes" component={Link} />
               <Tab label="產品和服務" to="/products" component={Link} />
               <Tab label="聯繫我們" to="/booking" component={Link} />
+              <Tab label="顧客評論" to="/testimonials" component={Link} />
             </Tabs>
           </Box>
 
@@ -209,7 +225,6 @@ const Header: React.FC<HeaderProps> = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      
     </>
   );
 };

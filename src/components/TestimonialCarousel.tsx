@@ -8,7 +8,7 @@ import TestimonialCard from "./TestimonialCard";
 
 type Testimonial = {
   id: number;
-  name: string;
+  name?: string;
   image: string;
   testimonial: string;
 };
