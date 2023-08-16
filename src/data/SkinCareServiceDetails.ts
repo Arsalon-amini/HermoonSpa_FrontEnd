@@ -1,4 +1,4 @@
-const ProdDetails = [
+const SkinCareServiceDetails = [
     {
       id: 1,
       name: "微針皮膚護理",
@@ -157,4 +157,4 @@ const ProdDetails = [
     }
   ];
 
-  export default ProdDetails;
+  export default SkinCareServiceDetails;

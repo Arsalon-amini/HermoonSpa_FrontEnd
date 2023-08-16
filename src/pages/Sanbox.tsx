@@ -1,10 +1,9 @@
 import { Box, Typography } from "@mui/material";
 
 import ProductGrid from "../components/ProductGrid";
-import ProdDetails from "../data/ProductDetailsData";
+import SkinCareServiceDetails from "../data/SkinCareServiceDetails";
 
 const Sanbox = () => {
-  
   return (
     <>
       <Box sx={{ display: "flex", justifyContent: "center", padding: "2rem" }}>
@@ -13,7 +12,7 @@ const Sanbox = () => {
         </Typography>
       </Box>
 
-      <ProductGrid products={ProdDetails} />
+      <ProductGrid products={SkinCareServiceDetails} />
     </>
   );
 };

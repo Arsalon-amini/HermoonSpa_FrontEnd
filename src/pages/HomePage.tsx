@@ -10,6 +10,10 @@ import ContentCardCarousel from "../components/ContentCardCarousel";
 import content from "../data/ClassesContent";
 import FAQAccordion from "../components/FAQAccordion";
 import HomePageFAQContent from "../data/HomePageFAQContent";
+import CardGrid from "../components/CardGrid";
+import SkinCareTestimonialsData from "../data/SkinCareTestimonialsData";
+import ProductGrid from "../components/ProductGrid";
+import FeaturedProductData from "../data/FeaturedProductData";
 
 type HomePageProps = {
   children?: React.ReactNode;
@@ -30,32 +34,6 @@ const HomePage: React.FC<HomePageProps> = () => {
         H1="禾沐"
         H2="Beauty Spa"
       />
-
-      <Paper
-        elevation={3}
-        style={{
-          padding: "20px",
-          borderRadius: theme.spacing(2),
-          marginTop: "2rem",
-          marginBottom: "2rem",
-        }}
-      >
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Typography
-            variant="h1"
-            style={{ color: theme.palette.secondary.main }}
-          >
-            創造終身客戶
-          </Typography>
-        </Box>
-        <TestimonialCarousel testimonials={testimonialData} />
-      </Paper>
-
       <Paper
         elevation={3}
         style={{
@@ -79,10 +57,31 @@ const HomePage: React.FC<HomePageProps> = () => {
             世界級的專業精神
           </Typography>
         </Box>
-        <ContentCardCarousel content={content} />
+        <CardGrid CardsContent={SkinCareTestimonialsData} />
+        <Box sx={{ margin: "2rem" }} />
       </Paper>
-
-      <FAQAccordion FAQContent={HomePageFAQContent} FAQTitle="經常問的問題" />
+      <Box
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
+        <Typography
+          variant="h1"
+          sx={{ padding: "2rem", color: theme.palette.primary.main }}
+        >
+          Featured Products
+        </Typography>
+      </Box>
+      <ProductGrid products={FeaturedProductData} />
+      <Box
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
+        <Typography
+          variant="h1"
+          sx={{ padding: "2rem", color: theme.palette.primary.main }}
+        >
+          Frequent Questions
+        </Typography>
+      </Box>
+      <FAQAccordion FAQContent={HomePageFAQContent} />
     </>
   );
 };

@@ -1,9 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import ContentCardCarousel from "../components/ContentCardCarousel";
+import FAQAccordion from "../components/FAQAccordion";
 import HeroSection from "../components/HeroSection";
 import Header from "../components/NavElements/Header";
 import content from "../data/ClassesContent";
+import HomePageFAQContent from "../data/HomePageFAQContent";
 import theme from "../utils/useTheme";
 
 type ClassesPageProps = {
@@ -40,6 +42,7 @@ const ClassesPage: React.FC<ClassesPageProps> = () => {
         </Typography>
       </Box>
       <ContentCardCarousel content={content} />
+      <FAQAccordion FAQContent={HomePageFAQContent} FAQTitle="經常問的問題" />
     </>
   );
 };
