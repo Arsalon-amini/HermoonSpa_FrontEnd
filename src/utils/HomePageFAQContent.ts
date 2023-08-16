@@ -1,11 +1,23 @@
-const FAQContent = [
+const HomePageFAQContent = [
     {
-      title: "這是經過認證的服務嗎？?",
+      title: "這是經過認證的服務嗎?",
       content: "是的，所有皮膚護理專業人士和講師均獲得韓國最高當局的認證，這是台灣南部獲得此級別認證的兩個機構之一。.",
     },
+     {
+      title: "這家店和其他護膚品店有什麼不同 ?",
+      content: "與其他商店不同，我們致力於成功的客戶成果並提供無憂退款。 此外，每位護膚專業人員都經過韓國頂級護膚機構的嚴格培訓和認證。",
+    },
     {
-      title: "How much does Netflix cost?",
-      content: "Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.",
+      title: "我多久才能看到皮膚外觀的改善效果？",
+      content: "結果很大程度上取決於年齡、病史和治療持續時間，但是經過認證的工作人員會根據以前的客戶結果告知您平均改善時間。",
+    },
+    {
+      title: "如果我的體驗不佳怎麼辦？",
+      content: "該商店致力於提供卓越的客戶服務，任何問題都會得到適當的關注，讓顧客感到完全滿意，包括在特殊情況下全額退款。 我們有信心為客戶取得優異的成果。因此您可以無風險地嘗試。",
+    },
+    {
+      title: "我如何預訂、更新或更改我的服務預約 ?",
+      content: "您可以通過線路、直接電話、Instagram 消息聯繫商店更新您的預約。",
     },
   ]
-  export default FAQContent;
+  export default HomePageFAQContent;

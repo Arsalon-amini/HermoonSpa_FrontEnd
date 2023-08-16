@@ -1,8 +1,7 @@
-import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import ContentCard from "../components/ContentCard";
 import FAQAccordion from "../components/FAQAccordion";
 import FAQContent from "../utils/HomePageFAQContent";
-
 
 const Sanbox = () => {
   const testContent = [
@@ -29,16 +28,15 @@ const Sanbox = () => {
     },
   ];
 
-  
   return (
     <>
       <Box sx={{ display: "flex", justifyContent: "center", padding: "2rem" }}>
         <Typography variant="h6" fontSize="2rem">
-          FAQ Accordion Component
+          Home Page FAQ
         </Typography>
       </Box>
-      <FAQAccordion FAQContent={FAQContent}/>
-   
+      <FAQAccordion FAQContent={FAQContent} FAQTitle="Home FAQs" />
+
       <Box sx={{ display: "flex", justifyContent: "center", padding: "2rem" }}>
         <Typography variant="h6" fontSize="2rem">
           Grid and Card Sandbox

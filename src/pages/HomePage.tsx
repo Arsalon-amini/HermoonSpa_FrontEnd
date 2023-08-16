@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Paper } from "@mui/material";
 import HeroSection from "../components/HeroSection";
 import Header from "../components/NavElements/Header";
 import theme from "../utils/useTheme";
@@ -8,6 +8,8 @@ import TestimonialCarousel from "../components/TestimonialCarousel";
 import testimonialData from "../utils/TestimonialData";
 import ContentCardCarousel from "../components/ContentCardCarousel";
 import content from "../utils/ClassesContent";
+import FAQAccordion from "../components/FAQAccordion";
+import HomePageFAQContent from "../utils/HomePageFAQContent";
 
 type HomePageProps = {
   children?: React.ReactNode;
@@ -28,36 +30,60 @@ const HomePage: React.FC<HomePageProps> = () => {
         H1="禾沐"
         H2="Beauty Spa"
       />
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        padding={theme.spacing(5, 0)}
+
+      <Paper
+        elevation={3}
+        style={{
+          padding: "20px",
+          borderRadius: theme.spacing(2),
+          marginTop: "2rem",
+          marginBottom: "2rem",
+        }}
       >
-        <Typography
-          variant="h1"
-          style={{ color: theme.palette.secondary.main }}
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center" 
         >
-          創造終身客戶
-        </Typography>
-      </Box>
-      <TestimonialCarousel testimonials={testimonialData} />
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        padding={theme.spacing(5, 0)}
+          <Typography
+            variant="h1"
+            style={{ color: theme.palette.secondary.main }}
+          >
+            創造終身客戶
+          </Typography>
+        </Box>
+        <TestimonialCarousel testimonials={testimonialData} />
+      </Paper>
+
+      <Paper
+        elevation={3}
+        style={{
+          padding: "1.5rem",
+          borderRadius: theme.spacing(2),
+          marginTop: "2rem",
+          marginBottom: "2rem",
+        }}
       >
-        <Typography
-          variant="h1"
-          style={{ color: theme.palette.secondary.main }}
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          padding={theme.spacing(2, 0)}
         >
-          世界級的專業精神
-        </Typography>
-      </Box>
-      <ContentCardCarousel content={content} />
+          <Typography
+            variant="h1"
+            style={{ color: theme.palette.secondary.main }}
+          >
+            世界級的專業精神
+          </Typography>
+        </Box>
+        <ContentCardCarousel content={content} />
+      </Paper>
+
+      
+      <FAQAccordion FAQContent={HomePageFAQContent} FAQTitle="經常問的問題" />
     </>
   );
 };
