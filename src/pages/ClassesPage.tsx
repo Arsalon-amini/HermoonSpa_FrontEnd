@@ -3,7 +3,7 @@ import React from "react";
 import ContentCardCarousel from "../components/ContentCardCarousel";
 import HeroSection from "../components/HeroSection";
 import Header from "../components/NavElements/Header";
-import content from "../utils/ClassesContent";
+import content from "../data/ClassesContent";
 import theme from "../utils/useTheme";
 
 type ClassesPageProps = {

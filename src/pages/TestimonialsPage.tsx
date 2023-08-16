@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import CardGrid from "../components/CardGrid";
 import Header from "../components/NavElements/Header";
-import TestimonialGridContent from "../utils/TestimonialGridContent";
+import TestimonialGridContent from "../data/TestimonialGridContent";
 
 type TestimonialsPageProps = {
   children?: React.ReactNode;
