@@ -1,4 +1,4 @@
-import { Box, Container, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 import theme from "../utils/useTheme";
 import AccordionItem from "./AccordionItem";
