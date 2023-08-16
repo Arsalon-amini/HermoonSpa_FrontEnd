@@ -10,7 +10,7 @@ import ContentCardCarousel from "../components/ContentCardCarousel";
 import content from "../utils/ClassesContent";
 import FAQAccordion from "../components/FAQAccordion";
 import HomePageFAQContent from "../utils/HomePageFAQContent";
-import TestimonialGridContent from "../utils/TestimonialGridContent";
+
 
 type HomePageProps = {
   children?: React.ReactNode;
