@@ -11,7 +11,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ imageUrl, H1, H2 }) => {
   return (
     <HeroSectionWrapper>
       <div
-        className="backgroundOverlay"
+        className="backGroundImage"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
       <Container className="heroContent">
@@ -33,7 +33,7 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
   justifyContent: "center",
   color: theme.palette.primary.main,
 
-  "& .backgroundOverlay": {
+  "& .backGroundImage": {
     position: "absolute",
     top: 0,
     left: 0,
@@ -41,7 +41,7 @@ const HeroSectionWrapper = styled("div")(({ theme }) => ({
     bottom: 0,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    opacity: 0.95, // Set the opacity here
+    zIndex: -1,
     height: "500",
   },
 

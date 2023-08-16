@@ -14,18 +14,12 @@ const ClassesPage: React.FC<ClassesPageProps> = () => {
   return (
     <>
       <Header />
+      {/* Toolbar Space added */}
       <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          color: theme.palette.common.black,
+        style={{
+          ...theme.mixins.toolbar,
         }}
-      >
-        <Typography variant="h1" sx={{ marginTop: "60px", padding: "40px" }}>
-          我們的認證美容課程
-        </Typography>
-      </Box>
+      />
       <HeroSection imageUrl="https://hermoonspa.s3.ap-southeast-2.amazonaws.com/license.jpeg" />
       <Box
         sx={{

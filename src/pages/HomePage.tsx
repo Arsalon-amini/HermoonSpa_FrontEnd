@@ -17,6 +17,12 @@ const HomePage: React.FC<HomePageProps> = () => {
   return (
     <>
       <Header />
+      {/* Toolbar Space added */}
+      <Box
+        style={{
+          ...theme.mixins.toolbar,
+        }}
+      />
       <HeroSection
         imageUrl="https://hermoonspa.s3.ap-southeast-2.amazonaws.com/hero.jpeg"
         H1="禾沐"
@@ -29,7 +35,10 @@ const HomePage: React.FC<HomePageProps> = () => {
         justifyContent="center"
         padding={theme.spacing(5, 0)}
       >
-        <Typography variant="h1" style={{ color: theme.palette.secondary.main }}>
+        <Typography
+          variant="h1"
+          style={{ color: theme.palette.secondary.main }}
+        >
           創造終身客戶
         </Typography>
       </Box>
@@ -41,7 +50,10 @@ const HomePage: React.FC<HomePageProps> = () => {
         justifyContent="center"
         padding={theme.spacing(5, 0)}
       >
-        <Typography variant="h1" style={{ color: theme.palette.secondary.main }}>
+        <Typography
+          variant="h1"
+          style={{ color: theme.palette.secondary.main }}
+        >
           世界級的專業精神
         </Typography>
       </Box>
